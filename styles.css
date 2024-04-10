@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* This hides horizontal scrollbar */
+  overflow-y: auto; /* This allows vertical scrollbar when needed */
+  overscroll-behavior-x: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-left img {
+    height: 25px; /* Adjust height as needed */
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar-right a:first-child {
+    margin-left: 0;
+}
+
+/*---------------Petshow-------------*/
+
+.petimage-container {
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+}
+
+.petimage {
+    width: 100%;
+}
+
+.petimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Change object-fit property to contain */
+}
+
+
+/*-----------------------Below Logo--------------*/
+.time-container {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: green;
+}
+
+.time {
+  width: 100%;
+}
+
+.time h3 {
+  font-size: 24px; /* Set the desired font size */
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+
+.time p {
+  margin-bottom: 10px;
+  color: white;
+  margin-left: 20px;
+}
+
+
+/*------------------------About-----------------------*/
+
+#about {
+    padding: 20px;
+}
+
+.about h2 {
+    font-size: 24px; /* Set the desired font size */
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.aboutcolumn1 {
+  width: 25%;
+}
+
+.aboutcolumn2 {
+  width: 50%;
+}
+.aboutcolumn2 p {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutcolumn3 {
+  width: 24.7%;
+}
+
+.logo-container-left img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 0 0 0 40px;
+}
+.logo-container-right img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 0 0 0 70px;
+}
+
+/*-----------------------Grooming Prices--------------*/
+
+#grooming-prices {
+    padding: 20px;
+    background-color: green;
+}
+
+.grooming-prices h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.groomingcolumn {
+    width: calc(33.33% - 20px); 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.price-box {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.price-box:nth-child(3n+1) {
+    margin-right: 20px; 
+}
+
+.price-box:nth-child(3n+1), .price-box:nth-child(3n+2), .price-box:nth-child(3n+3) {
+    margin-bottom: 20px; 
+}
+
+/*------------------------Gallery------------------*/
+
+#gallery {
+    background-color: white;
+    padding: 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 20px; /* Add some space below the heading */
+    align-items: center;
+    text-align: center;
+}
+
+.gallery p {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust the gap between grid items */
+}
+
+.grid-item {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%; /* Set the height equal to the width */
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* CSS for modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*----------------------Book Now---------------------*/
+
+#book {
+  background-color: white;
+  padding: 20px;
+}
+
+.book h2 {
+  margin-bottom: 20px; 
+  align-items: center;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.book p {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/*-----------------------Footer---------------------*/
+footer {
+  background-color: green;
+  width: 100%;
+  padding: 20px; /* Adjust padding as needed */
+  color: white;
+  text-align: center; /* Center align text */
+}
+
+footer a {
+  text-decoration: none; 
+  color: white; 
+  margin: 0 10px; /* Adjust margin as needed */
+  display: inline-block; /* Display links inline */
+  font-weight: normal; /* Set font weight to normal */
+}
+
+footer a:hover {
+  text-decoration: underline; 
+}
+
+/* Style for copyright section */
+.copyright {
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+.copyright p {
+  margin: 0; 
+}
+
+
+/*---------------------Mobile Media Quries------------------*/
+@media only screen and (max-width: 375px) {
+  .time-container {
+      display: flex;
+      flex-direction: column;
+      background-color: green; /* Background color for time container */
+      padding: 20px; /* Add padding as needed */
+      min-height: 200px; /* Set a minimum height to ensure visibility of .time p */
+  }
+
+  .time p {
+      margin: 0; /* Reset margin */
+      text-align: center; /* Center align text */
+  }
+
+  .petimage-container,
+  #navbar {
+      width: 100%; /* Set width to 100% */
+  }
+
+    /* Remove aboutcolumn1 and aboutcolumn3 */
+   
+
+    .aboutcolumn2 {
+      text-align: center;
+      margin: 0 auto; /* Center horizontally */
+  }
+
+   /* Display groomingcolumn vertically */
+   .groomingcolumn {
+    display: block;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 10px; /* Add spacing between columns */
+  }
+
+  #grooming-prices {
+    width: 100%;
+  }
+
+   /* Display grid items vertically */
+   .grid-container.horizontal-scroll {
+    grid-template-columns: 1fr; /* Set to one column */
+    grid-auto-flow: row; /* Display items in a single column */
+  }
+
+  .close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for modal content */
+.modal-content {
+    max-width: 100%;
+    max-height: 70vh; /* Adjust height as needed */
+}
+
+   /* Remove navbar-left */
+   .navbar-left {
+    display: none;
+}
+
+/* Horizontalize the 'a' tags within 'navbar-right' and add horizontal scroll */
+.navbar-right {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.navbar-right a {
+    flex: 0 0 auto;
+}
+
+  
+}
+
+/*-------------------------iPhone XR--------------------------*/
+@media only screen and (max-width: 414px) {
+  .time-container {
+      display: flex;
+      flex-direction: column;
+      background-color: green; /* Background color for time container */
+      padding: 20px; /* Add padding as needed */
+      min-height: 200px; /* Set a minimum height to ensure visibility of .time p */
+  }
+
+  .time p {
+      margin: 0; /* Reset margin */
+      text-align: center; /* Center align text */
+  }
+
+  .petimage-container,
+  #navbar {
+      width: 100%; /* Set width to 100% */
+  }
+
+    /* Remove aboutcolumn1 and aboutcolumn3 */
+    .aboutcolumn1,
+    .aboutcolumn3 {
+        display: none;
+    }
+
+    .aboutcolumn2 {
+      text-align: center;
+      margin: 0 auto; /* Center horizontally */
+  }
+
+   /* Display groomingcolumn vertically */
+   .groomingcolumn {
+    display: block;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 10px; /* Add spacing between columns */
+  }
+
+  #grooming-prices {
+    width: 100%;
+  }
+
+   /* Display grid items vertically */
+   .grid-container.horizontal-scroll {
+    grid-template-columns: 1fr; /* Set to one column */
+    grid-auto-flow: row; /* Display items in a single column */
+  }
+
+  .close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for modal content */
+.modal-content {
+    max-width: 100%;
+    max-height: 70vh; /* Adjust height as needed */
+}
+
+   /* Remove navbar-left */
+   .navbar-left {
+    display: none;
+}
+
+/* Horizontalize the 'a' tags within 'navbar-right' and add horizontal scroll */
+.navbar-right {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.navbar-right a {
+    flex: 0 0 auto;
+}
+
+  
+}
+
+/*-------------------------iPhone 14 Pro Max-----------------*/
+
+@media only screen and (max-width: 430px) {
+  .time-container {
+      display: flex;
+      flex-direction: column;
+      background-color: green; /* Background color for time container */
+      padding: 20px; /* Add padding as needed */
+      min-height: 200px; /* Set a minimum height to ensure visibility of .time p */
+  }
+
+  .time p {
+      margin: 0; /* Reset margin */
+      text-align: center; /* Center align text */
+  }
+
+  .petimage-container,
+  #navbar {
+      width: 100%; /* Set width to 100% */
+  }
+
+   
+
+    .aboutcolumn2 {
+      text-align: center;
+      margin: 0 auto; /* Center horizontally */
+  }
+
+   /* Display groomingcolumn vertically */
+   .groomingcolumn {
+    display: block;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 10px; /* Add spacing between columns */
+  }
+
+  #grooming-prices {
+    width: 100%;
+  }
+
+   /* Display grid items vertically */
+   .grid-container.horizontal-scroll {
+    grid-template-columns: 1fr; /* Set to one column */
+    grid-auto-flow: row; /* Display items in a single column */
+  }
+
+  .close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style for modal content */
+.modal-content {
+    max-width: 100%;
+    max-height: 70vh; /* Adjust height as needed */
+}
+
+   /* Remove navbar-left */
+   .navbar-left {
+    display: none;
+}
+
+/* Horizontalize the 'a' tags within 'navbar-right' and add horizontal scroll */
+.navbar-right {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.navbar-right a {
+    flex: 0 0 auto;
+}
+
+  
+}
